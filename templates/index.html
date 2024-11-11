@@ -212,7 +212,7 @@
 
                 {% if plot4 %}
                     <h3>Confidence Interval Results</h3>
-                    <p><strong>{{ confidence_level }}% Confidence Interval for {{ parameter.capitalize() }}:</strong> [{{ ci_lower | round(4) }}, {{ ci_upper | round(4) }}]</p>
+                    <p><strong>{{ confidence_level*100 }}% Confidence Interval for {{ parameter.capitalize() }}:</strong> [{{ ci_lower | round(4) }}, {{ ci_upper | round(4) }}]</p>
                     <p><strong>Mean Estimate:</strong> {{ mean_estimate | round(4) }}</p>
                     <p><strong>Confidence Interval Includes True Parameter:</strong> {{ includes_true }}</p>
                     <img src="{{ url_for('static', filename='plot4.png') }}" alt="Confidence Interval Plot">
